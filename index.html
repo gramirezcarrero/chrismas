@@ -1,0 +1,362 @@
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"/>
+    <style>
+      
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/*
+
+
+  CSS FOR TOP HALF
+
+
+*/
+
+body {
+  /*background: #A32C28;*/
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+div#merry {
+  font-family: 'Lobster'; 
+  color: #7B8055;
+  font-size: 42px;
+  width: 400px;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(1,1,1,0.55);
+  line-height: 95px;
+  vertical-align: middle;
+}
+
+div#container {
+  position: absolute;
+  width: 400px;
+  float: left;
+  left: 0px;
+  top: 0px;
+  height: 500px;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font: 100px/1 'Spirax', cursive;
+  text-shadow: 0px 0px 4px rgba(0,0,0, 0.5);
+  background-color: transparent;
+  -webkit-animation: snow 20s linear infinite;
+  -moz-animation: snow 20s linear infinite;
+  -ms-animation: snow 20s linear infinite;
+  animation: snow 20s linear infinite;
+}
+
+div#bottom {
+  font-family: 'Lobster'; 
+  color: #7B8055;
+  font-size: 34px;
+  width: 400px;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(1,1,1,0.55);
+  line-height: 95px;
+  vertical-align: middle;
+}
+
+div#img {
+  background: url('http://classroompromises.files.wordpress.com/2012/01/coca-cola_christmas6.jpg') 50% 5%;
+  width: 100%;
+  height: 100%;
+}
+
+div#card {
+  background: #BCA875;
+  width: 400px;
+  height: 700px;
+  box-shadow: 0 0 25px rgba(1,1,1,0.25),
+    0 0 5px rgba(1,1,1,0.05);
+}
+
+div#inner {
+  position: relative;
+  display: inline-block;
+  left: -50%;
+}
+
+div#outter {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  margin: 50px 0;
+}
+
+.bottom {
+  border-bottom: 2px solid rgba(250,250,250,0.50);
+}
+
+.top {
+  border-top: 2px solid rgba(56,64,48,0.50);
+}
+
+@keyframes snow { 
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+@-moz-keyframes snow { 
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+@-webkit-keyframes snow { 
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    50% { background-color: transparent }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: transparent;
+    }
+}
+
+@-ms-keyframes snow { 
+    0% { background-position: 0px 0px, 0px 0px, 0px 0px }
+
+    100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
+}
+
+/* 
+
+
+  START CSS FOR BOTTOM HALF
+
+
+
+*/
+
+div#howTo {
+  width: 525px;
+  text-align: center;
+  display: block;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 0 1px 1px rgba(1,1,1,0.25),
+    0 2px 1px rgba(1,1,1,0.25),
+    0 3px 1px rgba(1,1,1,0.25);
+}
+
+div#myLink {
+  background: rgba(1,1,1,0.25);
+  text-align: center;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: #ffffff;
+  margin: 25px 0;
+  border: 1px solid rgba(1,1,1,0.10);
+  box-shadow: 0 0 25px rgba(1,1,1,0.25);
+  outline: 0;
+  text-shadow: 0 1px 1px rgba(1,1,1,0.25),
+    0 2px 1px rgba(1,1,1,0.25),
+    0 3px 1px rgba(1,1,1,0.25);
+}
+
+#inputName, #inputName:active {
+  background: rgba(1,1,1,0.25);
+  text-align: center;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: #ffffff;
+  border: 1px solid rgba(1,1,1,0.10);
+  box-shadow: 0 0 25px rgba(1,1,1,0.25);
+  outline: 0;
+  text-shadow: 0 1px 1px rgba(1,1,1,0.25),
+    0 2px 1px rgba(1,1,1,0.25),
+    0 3px 1px rgba(1,1,1,0.25);
+}
+
+#submit {
+  background: #ffffff;
+  text-align: center;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: #A32C28;
+  border: 1px solid rgba(1,1,1,0.10);
+  box-shadow: 0 0 25px rgba(1,1,1,0.25);
+  outline: 0;
+  text-shadow: 0 1px 0 #7a211e,
+    0 2px 5px rgba(1,1,1,0.25);
+  margin-left: 25px;
+}
+
+#submit:active {
+  background: #ffffff;
+  text-align: center;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: #A32C28;
+  border: 1px solid rgba(1,1,1,0.10);
+  box-shadow: 0 0 5px rgba(1,1,1,0.25);
+  outline: 0;
+  text-shadow: 0 1px 0 #7a211e,
+    0 2px 5px rgba(1,1,1,0.25);
+}
+
+div#break {
+  height: 0px;
+  padding: 0;
+  width: 0;
+  margin: 0;
+}
+
+div#outter.smaller {
+  margin: 0px;
+}
+
+.footer {
+  font-size: 14px;
+  color: rgba(1,1,1,0.25);
+  text-shadow: none;
+  margin: 25px 0;
+}
+      </style>
+<script>
+
+
+  //
+//  Share with your friends a fun christmas card :)
+//  Just enter the desired 'from' name in the url :)
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+ /*
+ *  StaticEdge.js
+ *
+ *  Written by Matthew Porter (@pattmorter)
+ *  http://bitbucket.com/pattmorter/
+ *
+ *  StaticEdgeJS 'discovers' the parameters
+ *  supplied within a url when page is loaded
+ *  so that dynamic content can be loaded on a
+ *  static web page.
+ *
+ *  Functions:
+ *
+ *      var page = new StaticEdge({...});
+ *      
+ *      page.getParams();
+ *          Get specific key value pair.
+ *
+ *      page.goTo(URL);
+ *          URL spllied redirects page to said url.
+ *
+ *      page.findAllParams();
+ *          Prints out key value pairs.
+ */
+
+function StaticEdge(opts) {
+    this.url = opts.url || document.URL;
+}
+
+StaticEdge.prototype = {
+
+    getParams: function(key) {
+        var params = {};
+        this.url.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function(m, key, value) {
+                params[key] = value;
+            }
+        );
+        return params[key];
+    },
+
+    goTo: function(pointedUrl) {
+        document.location = pointedUrl;
+    },
+
+    findAllParams: function() {
+        this.url.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+            function(m, key, value) {
+                console.log(key + ': ' + value);
+            }
+        );
+    },
+};
+// code to allow user to share. woo!
+var __URL = document.URL;
+var page = new StaticEdge(__URL); // creates StaticEdge object. Only mattes in the pars that you send
+
+// this first segment only shows within the codepen view.
+if(page.getParams('penView') == 'no') {
+  
+  // this second segment alters the html to display the 'from' key's value
+  var name = page.getParams('from');
+  name = name.replace(/%20/g,' '); 
+  document.getElementById('bottom').innerHTML = 'From ' + name;
+  document.getElementById('howTo').style.display = 'none';
+  
+} else {
+  
+  document.getElementById('bottom').innerHTML = 'From Me to You'; 
+   document.getElementById('img').style.backgroundImage = "url('https://cdn.leonardo.ai/users/e8881454-376e-4bc0-82e5-f558625219e7/generations/6cd0178a-beaa-48b3-bf5d-035aa583db91/PhotoReal_chrismass_girl_snow_and_land_scape_0.jpg?w=512')";
+url1 = "https://cdn.leonardo.ai/users/e8881454-376e-4bc0-82e5-f558625219e7/generations/69bff16f-6f7f-4c41-b160-b95c510bf972/PhotoReal_chrismass_girl_0.jpg?w=512";
+  url2 ="https://cdn.leonardo.ai/users/e8881454-376e-4bc0-82e5-f558625219e7/generations/6cd0178a-beaa-48b3-bf5d-035aa583db91/PhotoReal_chrismass_girl_snow_and_land_scape_0.jpg?w=512"
+  
+  var i = 0;
+var images = [];
+var slideTime = 9000; // 3 seconds
+
+/*images[0] = 'https://via.placeholder.com/150/300AAA';*/
+images[0] = url1;
+images[1] = url2;
+  images[2] ="http://classroompromises.files.wordpress.com/2012/01/coca-cola_christmas6.jpg";
+
+function changePicture() {
+   document.getElementById('img').style.backgroundImage = "url(" + images[i] + ")";
+
+    if (i < images.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+    setTimeout(changePicture, slideTime);
+}
+
+window.onload = changePicture;
+  document.getElementById('submit').addEventListener('click', function() {
+   
+    var name = document.getElementById('inputName').value;
+    name = encodeURI(name);
+    var link = 'https://s.codepen.io/pattmorter/fullpage/LhDIg?penView=no&from=' + name;
+    document.getElementById('myLink').innerHTML = link;
+  });
+  
+}
+</script>
+
+  <div id="outter">
+  <div id="inner">
+    <div id="card">
+      <div class="bottom" id="merry">Merry Christmas!</div>
+      <div id="img"></div>
+      <div class="top" id="bottom">From TI to You</div>
+      <div id="container"></div>
+    </div>
+  </div>
+</div>
+<div id="break"></div>
+<div class="smaller" id="outter">
+  <div id="inner"></div>
+</div>
+</html>
