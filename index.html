@@ -112,10 +112,10 @@ function changePicture() {
     } else {
         i = 0;
     }
-    setTimeout(changePicture, slideTime);
+   // setTimeout(changePicture, slideTime);
 }
 
-window.onload = changePicture;
+//window.onload = changePicture;
 
 </script>
 <script>
@@ -194,6 +194,7 @@ function initnieve() {
 }
 
 function movenieve() {
+	changePicture();
     for (i=0;i<=nieve_cantidad;i++) {
         crds[i] += x_mv[i];
         nieve[i].posy+=nieve[i].sink
